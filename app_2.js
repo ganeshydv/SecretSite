@@ -173,7 +173,8 @@ app.get('/secrets',async function (req, resp) {
                     console.log(user_data)
                     // const title=user_data[0].user_.title;
                     // console.log(title)
-                    resp.render('secrets',{user_:user_data})
+                    const {user_} =user_data; //object destructering :took only user_ grom obj
+                    resp.render('secrets',{user_:user_})
                 }
             }
         })
